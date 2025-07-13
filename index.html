@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mossab Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -29,49 +32,49 @@
 <section class="hero">
 <h1>مرحبًا! أنا مصعب </h1>
 <p>مطور ومصمم واجهات أعمل على تحويل الأفكار إلى مواقع إلكترونية احترافية وسهلة الاستخدام.</p>
-<a href="#contact" class="btn">تواصل معي</a>
+<a href="#contact" class="btn">ابدأ الآن</a>  
 </section>
-<section class="services">
+<section class="services" data-aos="fade-up" data-aos-delay="200" id="contact">
   <h2>خدماتنا</h2>
   <div class="service-cards">
 
-<div class="card">
-  <i class="fas fa-laptop-code icon"></i>
-  <h3>برمجة المواقع</h3>
-  <p>إنشاء مواقع سريعة، متجاوبة، ومطابقة لتصميمك باستخدام HTML وCSS وJavaScript.</p>
-</div>
+    <div class="card" data-aos="fade-up">
+      <i class="fas fa-laptop-code icon"></i>
+      <h3>برمجة المواقع</h3>
+      <p>إنشاء مواقع سريعة، متجاوبة، ومطابقة لتصميمك باستخدام HTML وCSS وJavaScript.</p>
+    </div>
 
-<div class="card">
-  <i class="fas fa-pencil-ruler icon"></i>
-  <h3>تصميم واجهات المستخدم</h3>
-  <p>أصمم لك واجهات أنيقة وعصرية تركّز على تجربة المستخدم وسهولة التصفح.</p>
-</div>
+    <div class="card" data-aos="fade-up">
+      <i class="fas fa-pencil-ruler icon"></i>
+      <h3>تصميم الواجهات</h3>
+      <p>أصمم لك واجهات أنيقة وعصرية تركّز على تجربة المستخدم وسهولة التصفح.</p>
+    </div>
 
-<div class="card">
-  <i class="fas fa-wrench icon"></i>
-  <h3>دعم فني وتعديلات</h3>
-  <p>أوفر تعديلات مستمرة ودعمًا لموقعك، من تحسين السرعة إلى حل المشاكل البرمجية.</p>
-</div>
+    <div class="card" data-aos="fade-up">
+      <i class="fas fa-wrench icon"></i>
+      <h3>دعم فني</h3>
+      <p>أوفر تعديلات مستمرة ودعمًا لموقعك، من تحسين السرعة إلى حل المشاكل البرمجية.</p>
+    </div>
 
   </div>
 </section>
-<section class="about">
+<section class="about" data-aos="fade-up" data-aos-delay="100">
   <div class="about-content">
-    <div class="about-text">
+ <div class="about-text" data-aos="fade-right">
       <h2>من نحن</h2>
       <p>
         السلام عليكم معاكم مصعب، مطور ومصمم مواقع مبتدئ ، أشاركك رحلتي في بناء موقع من الصفر باستخدام HTML وCSS وكل ما أتعلمه مع الوقت.
         أسعى لتقديم تجربة استخدام مميزة وتصاميم بسيطة وأنيقة.
       </p>
     </div>
-    <div class="about-image">
+    <div class="about-image" data-aos="fade-left">
     <img src="mossab.jpg" alt="صورة Mossab">
     </div>
   </div>
 </section>
-<section class="contact">
+<section class="contact" data-aos="fade-up" data-aos-delay="300">
   <h2>تواصل معنا</h2>
-  <form class="contact-form">
+ <form class="contact-form" data-aos="zoom-in">
     <input type="text" placeholder="الاسم الكامل" required>
     <input type="email" placeholder="البريد الإلكتروني" required>
     <textarea placeholder="رسالتك" rows="5" required></textarea>
@@ -81,11 +84,77 @@
 <footer class="footer">
   <p>© 2025 Mossab. جميع الحقوق محفوظة.</p>
   <div class="social-links">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/mossab.amieur"target="_blank"rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"target="_blank"rel="noopener noreferrer"></i></a>
+    <a href="https://www.instagram.com/zf_8vb/"target="_blank"rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
   </div>
 </footer>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<button id="scrollTopBtn" title="العودة للأعلى">↑</button>
+<script>
+  // إظهار الزر بعد النزول
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  // عند الضغط يرجع للأعلى
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+<!-- زر الوضع المظلم -->
+<button id="darkModeToggle" title="تبديل الوضع">
+  <i class="fas fa-moon"></i>
+</button>
+
+<!-- سكربت التبديل -->
+<script>
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const icon = toggleBtn.querySelector("i");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  });
+</script>
+<script>
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const icon = toggleBtn.querySelector("i");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    // تغيير الأيقونة
+    if (document.body.classList.contains("dark-mode")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  });
+</script>
+
 
 </body>
 </html>
